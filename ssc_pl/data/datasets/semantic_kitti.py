@@ -192,7 +192,6 @@ class SemanticKITTI(Dataset):
         VP_path = osp.join(self.data_root, 'dataset', 'vanish-points', sequence, 'vp',
                             frame_id + '.npy')
         VP_pos = np.load(VP_path)
-        data['vp'] = np.array([610, 188])
         data['vp_ref'] = np.load('./vp_sample.npy')
 
         def ndarray_to_tensor(data: dict):
