@@ -143,7 +143,7 @@ def main(config: DictConfig):
     # print(files[0])
     # assert False
 
-    files = ['/volume/kent-ttm-ssd/Symphonies/Symphonies_VP_1526/outputs/SemanticKITTI/test/sequences/11/predictions/000015.label']
+    files = ['/volume/kent-ttm-ssd/VPA/VPA_VP_1526/outputs/SemanticKITTI/test/sequences/11/predictions/000015.label']
 
     for file in track(files):
         with open(file, 'rb') as f:

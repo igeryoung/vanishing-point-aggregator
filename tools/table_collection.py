@@ -3,7 +3,7 @@ import pandas as pd
 from PIL import Image
 
 # Step 1: Read log file
-file_path = '/volume/kent-ttm-ssd/Symphonies/Symphonies_VP_1526/outputs/version_19/log.txt'  # Update with the correct path to your log file
+file_path = '/volume/kent-ttm-ssd/VPA/VPA_VP_1526/outputs/version_19/log.txt'  # Update with the correct path to your log file
 with open(file_path, 'r') as file:
     log_content = file.read()
 

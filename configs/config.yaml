@@ -4,7 +4,7 @@
 
 defaults:
   - datasets: semantic_kitti
-  - models: symphonies
+  - models: vpa
   - schedules: adamw_lr2e-4_30e
   - _self_
 
@@ -20,4 +20,4 @@ trainer:
   sync_batchnorm: True
   # precision: 16-mixed
 
-ckpt_path: /project/aimm/SSC/Symphonies_VP_1526/outputs/version_19/e27_miou0.1526.ckpt
+ckpt_path: /project/aimm/SSC/VPA_VP_1526/outputs/version_19/e27_miou0.1526.ckpt

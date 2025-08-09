@@ -14,7 +14,7 @@ import numpy as np
 
 # ─── Configuration ─────────────────────────────────────────────────────────────
 INPUT_IMAGE_FILE   = '/project/aimm/SSC/SemanticKITTI/dataset/sequences/08/image_2/002022.png'
-INPUT_NPY_FILE     = '/project/aimm/SSC/Symphonies_VP_1526/vp_sample.npy'
+INPUT_NPY_FILE     = '/project/aimm/SSC/VPA_VP_1526/vp_sample.npy'
 OUTPUT_IMAGE_FILE  = './output.png'
 
 # Plot parameters for normalized points

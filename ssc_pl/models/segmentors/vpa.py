@@ -2,11 +2,11 @@ import torch.nn as nn
 
 from ... import build_from_configs
 from .. import encoders
-from ..decoders import SymphoniesDecoder
+from ..decoders import VPADecoder
 from ..losses import ce_ssc_loss, frustum_proportion_loss, geo_scal_loss, sem_scal_loss
 
 
-class Symphonies(nn.Module):
+class VPA(nn.Module):
 
     def __init__(
         self,
@@ -32,7 +32,7 @@ class Symphonies(nn.Module):
 
         self.encoder = build_from_configs(
             encoders, encoder, embed_dims=embed_dims, scales=view_scales)
-        self.decoder = SymphoniesDecoder(
+        self.decoder = VPADecoder(
             embed_dims,
             num_classes,
             num_layers=num_layers,

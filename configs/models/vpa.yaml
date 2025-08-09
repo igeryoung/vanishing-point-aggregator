@@ -1,7 +1,7 @@
 # @package _global_
 
 model:
-  type: Symphonies
+  type: VPA
   embed_dims: 128
   num_layers: 3
   view_scales: [4, 8, 16]
@@ -9,7 +9,7 @@ model:
     type: MMDetWrapper
     config_path: maskdino/configs/maskdino_r50_8xb2-panoptic-export.py
     custom_imports: maskdino
-    checkpoint_path: /project/aimm/SSC/ssc-kent/Symphonies_orig/ckpt/maskdino_r50_50e_300q_panoptic_pq53.0.pth
+    checkpoint_path: /project/aimm/SSC/ssc-kent/VPA_orig/ckpt/maskdino_r50_50e_300q_panoptic_pq53.0.pth
   criterions: [ce_ssc, sem_scal, geo_scal, frustum]
 
 optimizer:

@@ -14,7 +14,7 @@ from ..utils import (cumprod, flatten_fov_from_voxels, flatten_multi_scale_feats
                      get_level_start_index, index_fov_back_to_voxels, interpolate_flatten,
                      nchw_to_nlc, nlc_to_nchw, pix2vox)
 
-class SymphoniesLayer(nn.Module):
+class VPALayer(nn.Module):
 
     def __init__(self, embed_dims, num_heads=8, num_levels=3, num_points=4, query_update=True):
         super().__init__()
@@ -92,7 +92,7 @@ class SymphoniesLayer(nn.Module):
         return scene_embed, inst_queries
 
 
-class SymphoniesDecoder(nn.Module):
+class VPADecoder(nn.Module):
 
     def __init__(self,
                  embed_dims,
@@ -118,7 +118,7 @@ class SymphoniesDecoder(nn.Module):
 
         self.voxel_proposal = VoxelProposalLayer(embed_dims, scene_shape)
         self.layers = nn.ModuleList([
-            SymphoniesLayer(
+            VPALayer(
                 embed_dims,
                 num_levels=num_levels,
                 query_update=True if i != num_layers - 1 else False) for i in range(num_layers)

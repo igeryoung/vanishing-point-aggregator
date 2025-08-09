@@ -1,2 +1,2 @@
 from .monoscene import MonoScene
-from .symphonies import Symphonies
+from .vpa import VPA
