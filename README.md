@@ -2,8 +2,6 @@
 
 A PyTorch implementation of **VPA**, a novel approach for 3D Semantic Scene Completion (SSC) that leverages vanishing point aggregation to enhance multi-scale feature fusion for autonomous driving applications.
 
-![Architecture](assets/arch.png)
-
 ## Overview
 
 This project implements an advanced 3D semantic scene completion system that uses vanishing point information to aggregate multi-scale features more effectively. The system combines:
@@ -216,22 +214,9 @@ Evaluation configurations are in `configs/datasets/` for each supported dataset.
 
 This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
-## Citation
-
-If you use this code in your research, please cite:
-
-```bibtex
-@article{vanishing_point_aggregator,
-  title={Vanishing Point Aggregator for 3D Semantic Scene Completion},
-  author={Your Name},
-  journal={Conference/Journal},
-  year={2024}
-}
-```
-
 ## Acknowledgments
 
-- Built on top of PyTorch Lightning and Hydra
+- Built on top of Symphonies, Voxformer, mmdetection
 - Incorporates ideas from MonoScene, CVT, and deformable attention mechanisms
 - SemanticKITTI dataset providers
 - MMDetection framework for 2D detection components
